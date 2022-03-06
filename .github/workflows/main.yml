@@ -29,7 +29,7 @@ jobs:
       - name: Copy the build
         run: |
           ls
-          cp -a ./EdTech2022/build/ .
+          cp -a ./EdTech2022/Build/ .
           echo Listing updated directories
           ls
           echo Done copying WebGL Build to Root!
