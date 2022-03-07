@@ -9,6 +9,18 @@ public class GameManager : MonoBehaviour
     async void Start()
     {
         await UnityServices.InitializeAsync();
+
+        try
+        {
+            //todo: add the consent pieces
+            List<string> consentIdentifiers = await Events.CheckForRequiredConsents();           
+        }
+        catch (ConsentCheckException e)
+        {
+            Debug.Log("Error reason = " + e.Reason.ToString());
+        }
+ 
+        Debug.Log("Done with Start!");   
     }
 
     // Update is called once per frame
