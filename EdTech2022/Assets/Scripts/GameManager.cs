@@ -13,7 +13,12 @@ public class GameManager : MonoBehaviour
         try
         {
             //todo: add the consent pieces
-            List<string> consentIdentifiers = await Events.CheckForRequiredConsents();           
+            List<string> consentIdentifiers = await Events.CheckForRequiredConsents();  
+            consentIdentifiers.ForEach(id =>
+            {
+                Events.ProvideOptInConsent(id, true);
+                Debug.Log("Consent given for " + id);
+            });      
         }
         catch (ConsentCheckException e)
         {
