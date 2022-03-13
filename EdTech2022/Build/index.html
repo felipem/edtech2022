@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | EdTech2022</title>
+    <title>Ed Tech Climate Game</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -20,9 +20,27 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">EdTech2022</div>
+        <div id="unity-build-title">Climate Game</div>
       </div>
     </div>
+    <script type="module" > 
+      import {initializeApp  } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js"
+      import {getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-analytics.js"
+      import { } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js"
+        const firebaseConfig = {
+          apiKey: "AIzaSyDSPkF8ejlojNXB66umVjzzFmd7NJ6g-uw",
+          authDomain: "edtech2022-cd734.firebaseapp.com",
+          projectId: "edtech2022-cd734",
+          storageBucket: "edtech2022-cd734.appspot.com",
+          messagingSenderId: "170647088499",
+          appId: "1:170647088499:web:1ea5ca4388f3e55e8f6906",
+          measurementId: "G-302RTZEXGZ"
+        };
+
+        // Initialize Firebase
+        initializeApp(firebaseConfig);
+        const analytics = getAnalytics();
+  </script>
     <script>
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
@@ -62,8 +80,8 @@
         frameworkUrl: buildUrl + "/Build.framework.js",
         codeUrl: buildUrl + "/Build.wasm",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "DefaultCompany",
-        productName: "EdTech2022",
+        companyName: "Education Technology",
+        productName: "Climate Game",
         productVersion: "1.0",
         showBanner: unityShowBanner,
       };
