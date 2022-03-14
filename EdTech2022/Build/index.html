@@ -23,10 +23,10 @@
         <div id="unity-build-title">Climate Game</div>
       </div>
     </div>
-    <script type="module" > 
-      import {initializeApp  } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js"
-      import {getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-analytics.js"
-      import { } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js"
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-analytics-compat.js"></script>
+    <script> 
         const firebaseConfig = {
           apiKey: "AIzaSyDSPkF8ejlojNXB66umVjzzFmd7NJ6g-uw",
           authDomain: "edtech2022-cd734.firebaseapp.com",
@@ -38,8 +38,8 @@
         };
 
         // Initialize Firebase
-        initializeApp(firebaseConfig);
-        const analytics = getAnalytics();
+        firebase.initializeApp(firebaseConfig);
+        const analytics = firebase.getAnalytics();
   </script>
     <script>
       var container = document.querySelector("#unity-container");
@@ -104,6 +104,8 @@
         canvas.style.height = "600px";
       }
       loadingBar.style.display = "block";
+      
+      var myGameInstance = null;
 
       var script = document.createElement("script");
       script.src = loaderUrl;
@@ -111,6 +113,7 @@
         createUnityInstance(canvas, config, (progress) => {
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
+          myGameInstance = unityInstance;
           loadingBar.style.display = "none";
           fullscreenButton.onclick = () => {
             unityInstance.SetFullscreen(1);

@@ -22,7 +22,7 @@
                             }
                          
                         
-                             unityInstance.SendMessage("AuthHandler", "LoginSuccess", JSON.stringify(successObj));
+                             myGameInstance.SendMessage("AuthHandler", "LoginSuccess", JSON.stringify(successObj));
                             
                       });
                      
@@ -30,7 +30,7 @@
                       console.log(error);
      
                       
-                      unityInstance.SendMessage("AuthHandler", "LoginError", JSON.stringify(error));
+                      myGameInstance.SendMessage("AuthHandler", "LoginError", JSON.stringify(error));
                     });
                   },
         loginAnonymously: function() {
@@ -49,12 +49,12 @@
                             }
                          
                         
-                             unityInstance.SendMessage("AuthHandler", "LoginSuccess", JSON.stringify(successObj));
+                             myGameInstance.SendMessage("AuthHandler", "LoginSuccess", JSON.stringify(successObj));
                             
                       });
             }).catch(function (error) {
                       console.log(error);
-                      unityInstance.SendMessage("AuthHandler", "LoginError", JSON.stringify(error));
+                      myGameInstance.SendMessage("AuthHandler", "LoginError", JSON.stringify(error));
             
             });
         },
@@ -84,13 +84,13 @@
                             }
                          
                         
-                             unityInstance.SendMessage("AuthHandler", "LoginSuccess", JSON.stringify(successObj));
+                             myGameInstance.SendMessage("AuthHandler", "LoginSuccess", JSON.stringify(successObj));
                             
                       });
                       
             }).catch(function (error) {
                 console.log(error);
-                 unityInstance.SendMessage("AuthHandler", "LoginError", JSON.stringify(error));
+                 myGameInstance.SendMessage("AuthHandler", "LoginError", JSON.stringify(error));
             });
             
             
