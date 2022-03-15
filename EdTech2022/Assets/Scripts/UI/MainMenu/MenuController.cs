@@ -1,38 +1,34 @@
+using Persistence;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using World;
 
 public class MenuController : MonoBehaviour
 {
-    //public GameObject worldsPanel;
-
-    //public GameObject viewWorldPanel;
-
     public GameObject playGameButton;
     public GameObject loginPanel;
-
+    [SerializeField] private WorldManager worldManager;
+    [SerializeField] private GameObject loader;
+    private PersistenceManager persistenceManager;
     // Start is called before the first frame update
     void Start()
     {
-        //worldsPanel.SetActive(false);
-        //viewWorldPanel.SetActive(false);
-        
+        persistenceManager = FindObjectOfType<PersistenceManager>();
     }
     public void PlayButtonOnClick()
     {
         playGameButton.GetComponentInChildren<Text>().text = "Retrieving...";
-        //worldsPanel.GetComponent<WorldsPanelController>().PopulateWorldsList(() =>
-        //{
-        //    viewWorldPanel.SetActive(false);
-        //    worldsPanel.SetActive(true);
-        //    playGameButton.GetComponentInChildren<Text>().text = "Play Game";
-        //});
-    }
-    public void OpenViewWorldModal()
-    {
-        //worldsPanel.SetActive(false);
-        //viewWorldPanel.SetActive(true);
+        ServerWorld world = worldManager.CreateWorld("Test World");
+
+        // initialise
+        // load main scene
+        persistenceManager.SelectedWorld = world;
+        loader.SetActive(true);
+        SceneManager.LoadScene("TestScene", LoadSceneMode.Single);
+        SceneManager.sceneLoaded += (arg0, mode) => loader.SetActive(false);
     }
 
     public void ExitButtonOnClick()

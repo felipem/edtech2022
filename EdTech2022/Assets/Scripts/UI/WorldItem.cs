@@ -9,7 +9,6 @@ public class WorldItem : MonoBehaviour
     [SerializeField] private Text worldNameText;
     [SerializeField] private Text carbonCreditsText;
     [SerializeField] private Text populationText;
-    [SerializeField] private GameObject sharePanel;
 
     private GameObject loader;
     private ServerWorld world;
@@ -46,14 +45,5 @@ public class WorldItem : MonoBehaviour
         carbonCreditsText.text = serverWorld.world.ResourceData.Money.ToString();
         populationText.text = serverWorld.world.ResourceData.Population.ToString();
 
-        if (serverWorld.shareCode != null)
-        {
-            sharePanel.SetActive(true);
-            sharePanel.GetComponentInChildren<Text>().text = serverWorld.shareCode;
-        }
-        else
-        {
-            sharePanel.SetActive(false);
-        }
     }
 }

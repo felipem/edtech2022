@@ -18,8 +18,7 @@ public class WorldManager : MonoBehaviour
 
 
     private PersistenceManager persistenceManager;
-    [SerializeField]
-    private WorldGenerator worldGenerator;
+    [SerializeField]    private WorldGenerator worldGenerator;
 
 
     private List<ServerWorld> serverWorlds;
