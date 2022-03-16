@@ -27,7 +27,7 @@ public class MenuController : MonoBehaviour
         // load main scene
         persistenceManager.SelectedWorld = world;
         loader.SetActive(true);
-        SceneManager.LoadScene("TestScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("BoardScene", LoadSceneMode.Single);
         SceneManager.sceneLoaded += (arg0, mode) => loader.SetActive(false);
     }
 
