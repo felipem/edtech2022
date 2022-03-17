@@ -2,6 +2,7 @@ using System;
 using Newtonsoft.Json;
 using Persistence;
 using Persistence.Serializables;
+using Unity.AI.Navigation;
 using UnityEngine;
 
 using World.Entities;
@@ -22,7 +23,7 @@ namespace World
         [SerializeField] private ResourceSingleton resources;
         private PersistenceManager persistenceManager;
 
-        //public NavMeshSurface surface;
+        public NavMeshSurface surface;
 
         private Tile[,] tiles = default;
         public Tile[,] Tiles => tiles;
@@ -142,10 +143,10 @@ namespace World
         public void RebakeNavMesh()
         {
             // bake nav mesh
-            //if (surface != null)
-            //{
-            //    surface.BuildNavMesh();
-            //}
+            if (surface != null)
+            {
+                surface.BuildNavMesh();
+            }
         }
 
 
