@@ -42,10 +42,10 @@ public class ResourceView : MonoBehaviour
         viewedResources = new ViewedResource[4];
         sliderTransform = new Dictionary<string, Transform>();
 
-        viewedResources[0] = getViewedResource("Power");
-        viewedResources[1] = getViewedResource("Environment");
-        viewedResources[2] = getViewedResource("Food");
-        viewedResources[3] = getViewedResource("Shelter");
+        viewedResources[0] = getViewedResource("PowerPanel");
+        viewedResources[1] = getViewedResource("EnvironmentPanel");
+        viewedResources[2] = getViewedResource("FoodPanel");
+        viewedResources[3] = getViewedResource("ShelterPanel");
 
         InvokeRepeating("TickTenthSecond", 0.1f, 0.1f);
         InvokeRepeating("TickSecond", 1f, 1f);

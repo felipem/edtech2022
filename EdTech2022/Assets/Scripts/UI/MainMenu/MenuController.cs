@@ -28,7 +28,7 @@ public class MenuController : MonoBehaviour
         persistenceManager.SelectedWorld = world;
         loader.SetActive(true);
         SceneManager.LoadScene("BoardScene", LoadSceneMode.Single);
-        SceneManager.sceneLoaded += (arg0, mode) => loader.SetActive(false);
+        SceneManager.sceneLoaded += (arg0, mode) => { if (loader != null) loader.SetActive(false); };
     }
 
     public void ExitButtonOnClick()
