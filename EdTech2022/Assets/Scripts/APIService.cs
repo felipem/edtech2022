@@ -7,7 +7,7 @@ using World;
 
 public class APIService : MonoBehaviour
 {    
-    private static string BASE_ENDPOINT = "https://xxx.cloudfunctions.net/api/";
+    private static string BASE_ENDPOINT = "https://us-central1-edtech2022-cd734.cloudfunctions.net/api/";
     private static string WORLDS_ENDPOINT = BASE_ENDPOINT + "worlds/";
     private static string USER_ENDPOINT = BASE_ENDPOINT + "user/";
 
