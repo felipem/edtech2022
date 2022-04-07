@@ -21,6 +21,7 @@ namespace Persistence
         private ServerWorld selectedWorld;
 
         private static bool created = false;
+        private bool initialSurveyComplete = false;
         void Awake()
         {
             if (!created)
@@ -59,6 +60,12 @@ namespace Persistence
         {
             get => selectedWorld;
             set => selectedWorld = value;
+        }
+
+        public bool InitialSurveyComplete
+        {
+            get => initialSurveyComplete;
+            set => initialSurveyComplete = value;
         }
     }
 }

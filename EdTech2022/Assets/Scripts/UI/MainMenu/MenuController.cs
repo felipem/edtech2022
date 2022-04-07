@@ -9,7 +9,10 @@ using World;
 public class MenuController : MonoBehaviour
 {
     public GameObject playGameButton;
+    public GameObject playAnywaysGameButton;
     public GameObject loginPanel;
+    public GameObject surveyButton;
+
     [SerializeField] private WorldManager worldManager;
     [SerializeField] private GameObject loader;
     private PersistenceManager persistenceManager;
@@ -17,6 +20,16 @@ public class MenuController : MonoBehaviour
     void Start()
     {
         persistenceManager = FindObjectOfType<PersistenceManager>();
+        if (!persistenceManager.InitialSurveyComplete)
+        {
+            playGameButton.GetComponentInChildren<Button>().interactable = false;
+            surveyButton.SetActive(true);
+        }
+        else
+        {
+            playGameButton.GetComponentInChildren<Button>().interactable = true;
+            surveyButton.SetActive(false);
+        }
     }
     public void PlayButtonOnClick()
     {
@@ -28,6 +41,15 @@ public class MenuController : MonoBehaviour
         persistenceManager.SelectedWorld = world;
         loader.SetActive(true);
         SceneManager.LoadScene("BoardScene", LoadSceneMode.Single);
+        SceneManager.sceneLoaded += (arg0, mode) => { if (loader != null) loader.SetActive(false); };
+    }
+
+    public void SurveyButtonOnClick()
+    {
+        surveyButton.GetComponentInChildren<Text>().text = "Retrieving...";
+ 
+        loader.SetActive(true);
+        SceneManager.LoadScene("SurveyScene", LoadSceneMode.Single);
         SceneManager.sceneLoaded += (arg0, mode) => { if (loader != null) loader.SetActive(false); };
     }
 

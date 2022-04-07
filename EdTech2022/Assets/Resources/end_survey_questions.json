@@ -1,0 +1,41 @@
+{
+  "Questions" : [
+    {
+      "AnswerRequired" : true,
+      "QuestionTask" : "How do feel?",
+      "QuestionType" : "1",
+      "QuestionElements" : [
+        {
+          "IndexNumber" : 0,
+          "TextMessage" : "No formal qualifications",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 1,
+          "TextMessage" : "High school",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 2,
+          "TextMessage" : "Undergraduate or technical diploma",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 3,
+          "TextMessage" : "Graduate",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 4,
+          "TextMessage" : "Postgraduate",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        }
+      ]
+    }  
+  ]
+}

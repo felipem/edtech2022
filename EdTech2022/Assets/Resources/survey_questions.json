@@ -1,0 +1,232 @@
+{
+  "Questions" : [
+    {
+      "AnswerRequired" : true,
+      "QuestionTask" : "What is your highest level of education?",
+      "QuestionType" : "1",
+      "QuestionElements" : [
+        {
+          "IndexNumber" : 0,
+          "TextMessage" : "No formal qualifications",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 1,
+          "TextMessage" : "High school",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 2,
+          "TextMessage" : "Undergraduate or technical diploma",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 3,
+          "TextMessage" : "Graduate",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 4,
+          "TextMessage" : "Postgraduate",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        }
+      ]
+    },
+    {
+      "AnswerRequired" : true,
+      "QuestionTask" : "What is your age?",
+      "QuestionType" : "1",
+      "QuestionElements" : [
+        {
+          "IndexNumber" : 0,
+          "TextMessage" : "Under 24",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 1,
+          "TextMessage" : "25-44",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 2,
+          "TextMessage" : "45-65",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 3,
+          "TextMessage" : "65 or over",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 4,
+          "TextMessage" : "Prefer not to say",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        }
+      ]
+    },  
+    {
+      "AnswerRequired" : true,
+      "QuestionTask" : "What gender do you identify as?",
+      "QuestionType" : "1",
+      "QuestionElements" : [
+        {
+          "IndexNumber" : 0,
+          "TextMessage" : "Male",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 1,
+          "TextMessage" : "Female",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 2,
+          "TextMessage" : "Other",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        }
+      ]
+    },
+    {
+      "AnswerRequired" : true,
+      "QuestionTask" : "What income level do you consider yourself at as compared to your peer groups?",
+      "QuestionType" : "1",
+      "QuestionElements" : [
+        {
+          "IndexNumber" : 0,
+          "TextMessage" : "I make significantly less than my peer group",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 1,
+          "TextMessage" : "I make slightly less than my peer group",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 2,
+          "TextMessage" : "I make about the same as my peer group",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 3,
+          "TextMessage" : "I make slightly more than my peer group",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 4,
+          "TextMessage" : "I make significantly more than my peer group",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 5,
+          "TextMessage" : "Prefer not to say",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        }
+      ]
+    },  
+    {
+      "AnswerRequired" : true,
+      "QuestionTask" : "How would you describe your political orientation?",
+      "QuestionType" : "1",
+      "QuestionElements" : [
+        {
+          "IndexNumber" : 0,
+          "TextMessage" : "Very conservative",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 1,
+          "TextMessage" : "Moderately conservative",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 2,
+          "TextMessage" : "Moderate",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 3,
+          "TextMessage" : "Moderately progressive or liberal",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 4,
+          "TextMessage" : "Very progressive or liberal",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 5,
+          "TextMessage" : "Unsure or apolitical",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        }
+      ]
+    },  
+    {
+      "AnswerRequired" : true,
+      "QuestionTask" : "What continent do you currently reside in?",
+      "QuestionType" : "1",
+      "QuestionElements" : [
+        {
+          "IndexNumber" : 0,
+          "TextMessage" : "North America",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 1,
+          "TextMessage" : "South America",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 2,
+          "TextMessage" : "Asia",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 3,
+          "TextMessage" : "Africa",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 4,
+          "TextMessage" : "Europe",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 5,
+          "TextMessage" : "Australia",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        }
+      ]
+    }
+  ]
+}

@@ -9,11 +9,30 @@ public class APIService : MonoBehaviour
 {    
     private static string BASE_ENDPOINT = "https://us-central1-edtech2022-cd734.cloudfunctions.net/api/";
     private static string WORLDS_ENDPOINT = BASE_ENDPOINT + "worlds/";
+    private static string PRE_SURVEY_ENDPOINT = BASE_ENDPOINT + "surveypre/";
+    private static string POST_SURVEY_ENDPOINT = BASE_ENDPOINT + "surveypost/";
     private static string USER_ENDPOINT = BASE_ENDPOINT + "user/";
 
     public string access_token { get; set; }
+    private static bool created = false;
+    void Awake()
+    {
+        if (!created)
+        {
+            DontDestroyOnLoad(gameObject);
+            created = true;
+        }
+        else
+        {
+            // Navigated back to main menu so we can reset "selected world"
+            access_token = null;
+            Destroy(gameObject);
+        }
+    }
+
 
     private static APIService _instance;
+
 
     public static APIService Instance
     {
@@ -151,6 +170,16 @@ public class APIService : MonoBehaviour
         string json = JsonConvert.SerializeObject(world, serializationSettings);
         Debug.Log(json);
         StartCoroutine(Post(WORLDS_ENDPOINT, json, callBack));
+    }
+
+    public void SendPresurvey(string surveyData, System.Action<string> callBack)
+    {
+        StartCoroutine(Post(PRE_SURVEY_ENDPOINT, surveyData, callBack));
+    }
+
+    public void SendPostsurvey(string surveyData, System.Action<string> callBack)
+    {
+        StartCoroutine(Post(POST_SURVEY_ENDPOINT, surveyData, callBack));
     }
 
     public void DeleteWorld(string id)
