@@ -14,8 +14,7 @@ public class EscapeController : MonoBehaviour
     [SerializeField] private GameObject escapeUIObj;
 
     private List<GameObject> elementsOff;
-    public Text shareText;
-    public Button shareButton;
+
     //private PostProcessingBehaviour blurComponent;
     private bool gameIsPaused = false;
     public bool GameIsPaused => gameIsPaused;
@@ -24,9 +23,7 @@ public class EscapeController : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        GameObject mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         escapeUIObj.SetActive(false);
-        //blurComponent = mainCamera.GetComponent<PostProcessingBehaviour>();
         board = FindObjectOfType<GameBoard>();
         InvalidateSharingUI();
     }
@@ -93,20 +90,19 @@ public class EscapeController : MonoBehaviour
         {
             return;
         }
+    }
 
-        if (board.ActiveWorld.shareCode != null)
+    public void BackButtonSurveyOnClick()
+    {
+        // load main scene
+        Resume();
+        board.ActiveWorld = null;
+        SceneManager.LoadScene("EndSurveyScene", LoadSceneMode.Single);
+        loader.SetActive(true);
+        SceneManager.sceneLoaded += (scene, mode) =>
         {
-            shareText.gameObject.SetActive(true);
-            shareText.text = "Code: " + board.ActiveWorld.shareCode;
-            if (shareButton)
-                shareButton.GetComponentInChildren<Text>().text = "Stop Sharing";
-        }
-        else
-        {
-            shareText.gameObject.SetActive(false);
-            if (shareButton)
-                shareButton.GetComponentInChildren<Text>().text = "Share World";
-        }
+            loader.SetActive(false);
+        };
     }
 
     public void BackButtonOnClick()
@@ -114,14 +110,11 @@ public class EscapeController : MonoBehaviour
         // load main scene
         Resume();
         board.ActiveWorld = null;
-        SceneManager.LoadScene("MainUIScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("LoginUIScene", LoadSceneMode.Single);
         loader.SetActive(true);
         SceneManager.sceneLoaded += (scene, mode) =>
         {
-            if (scene.name.Equals("TestScene"))
-            {
-                loader.SetActive(false);
-            }
+            loader.SetActive(false);
         };
     }
 

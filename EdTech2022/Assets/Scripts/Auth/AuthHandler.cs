@@ -46,7 +46,7 @@ public class AuthHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        authProvider = new FirebaseAuthProvider(new FirebaseConfig(apiKey));
+        authProvider = new FirebaseAuthProvider(new FirebaseConfig(apiKey,"https://unity-edtech2022"));
     }
     public void Logout()
     {

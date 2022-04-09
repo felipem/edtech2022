@@ -11,16 +11,15 @@ public class EndScreenController : MonoBehaviour
     [SerializeField] private GameObject loader;
 
     private EscapeController escapeController;
-    //private PostProcessingBehaviour blurComponent;
+
     private List<GameObject> elementsOff;
 
     // Start is called before the first frame update
     private void Start()
     {
         escapeController = gameObject.GetComponent<EscapeController>();
-        GameObject mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+
         winMenuUI.SetActive(false);
-        //blurComponent = mainCamera.GetComponent<PostProcessingBehaviour>();
     }
 
     public void EnableWinScreen()
@@ -37,7 +36,6 @@ public class EndScreenController : MonoBehaviour
 
         escapeController.enabled = false;
         winMenuUI.SetActive(true);
-        //blurComponent.enabled = true;
         Tile.highlightEnabled = false;
     }
 
@@ -103,14 +101,22 @@ public class EndScreenController : MonoBehaviour
     public void MainMenuButtonOnClick()
     {
         // show spinner/loader and switch scenes
-        SceneManager.LoadScene("MainUIScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("LoginUIScene", LoadSceneMode.Single);
         loader.SetActive(true);
         SceneManager.sceneLoaded += (scene, mode) =>
         {
-            if (scene.name.Equals("TestScene"))
-            {
-                loader.SetActive(false);
-            }
+            loader.SetActive(false);
+        };
+    }
+
+    public void MainMenuButtonSurveyOnClick()
+    {
+        // show spinner/loader and switch scenes
+        SceneManager.LoadScene("EndSurveyScene", LoadSceneMode.Single);
+        loader.SetActive(true);
+        SceneManager.sceneLoaded += (scene, mode) =>
+        {
+            loader.SetActive(false);
         };
     }
 }

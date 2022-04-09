@@ -34,7 +34,7 @@ public class SubmittingBehaviour : UI_AbstractMenuBehaviour {
         {
             savedCount = PlayerPrefs.GetInt("SavedCount");
         }
-        SaveLocal(survey, savedCount);
+        //SaveLocal(survey, savedCount);
 
         if (Presurvey)
         {
@@ -51,7 +51,14 @@ public class SubmittingBehaviour : UI_AbstractMenuBehaviour {
         {
             APIService.Instance.SendPostsurvey(survey, (data) =>
             {
-                Application.Quit();
+                APIService.Instance.SendPresurvey(survey, (data) =>
+                {
+                    savedCount++;
+                    PlayerPrefs.SetInt("SavedCount", savedCount);
+                    persistenceManager.InitialSurveyComplete = true;
+
+                    SceneManager.LoadScene("LoginUIScene", LoadSceneMode.Single);
+                });
             });
         }
     }
