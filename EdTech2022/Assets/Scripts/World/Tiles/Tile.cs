@@ -145,7 +145,9 @@ namespace World.Tiles
 
             if (cost == null)
             {
-                cost = GameObject.FindWithTag("ReclaimCost").GetComponent<Text>();
+                var gameObject = GameObject.FindWithTag("ReclaimCost");
+                if (gameObject != null)
+                    cost = gameObject.GetComponent<Text>();
             }
 
             if (placer != null)

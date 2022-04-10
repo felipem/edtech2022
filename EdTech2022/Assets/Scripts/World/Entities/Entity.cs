@@ -3,6 +3,7 @@ using System;
 using UnityEngine;
 using World.Tiles;
 using UnityEngine.EventSystems;
+using HUD;
 
 namespace World.Entities
 {
@@ -238,7 +239,7 @@ namespace World.Entities
 
             if (entityHelper.GetEntityPlacerMode() != EntityPlacerMode.DELETE)
             {
-                //UpgradeInformationController.Instance.ShowInformation(this);
+                UpgradeInformationController.Instance.ShowInformation(this);
             }
 
             if (entityHelper.GetEntityPlacerMode() == EntityPlacerMode.DELETE)
@@ -251,14 +252,14 @@ namespace World.Entities
                     tile.Entity = null;
                     tile.HideHighlight();
                 }
-                
-                //if (UpgradeInformationController.Instance.IsUpgradeInformationOpen())
-                //{
-                //    if (this == UpgradeInformationController.Instance.Entity)
-                //    {
-                //        UpgradeInformationController.Instance.CloseInformation();
-                //    }
-                //}
+
+                if (UpgradeInformationController.Instance.IsUpgradeInformationOpen())
+                {
+                    if (this == UpgradeInformationController.Instance.Entity)
+                    {
+                        UpgradeInformationController.Instance.CloseInformation();
+                    }
+                }
             }
         }
     }

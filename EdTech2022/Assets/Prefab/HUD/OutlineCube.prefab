@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2277008931363814547}
   - component: {fileID: 4437263076443473363}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: OutlineCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,10 +55,12 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0176d1e58432740bc9c829a00d45ed81, type: 2}
+  - {fileID: 2100000, guid: 68e3c7e24f5c4b2458257f55b849a85b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -79,6 +81,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!65 &4437263076443473363
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -2,40 +2,239 @@
   "Questions" : [
     {
       "AnswerRequired" : true,
-      "QuestionTask" : "How do feel?",
+      "QuestionTask" : "Did playing this game change your opinion on climate change?",
       "QuestionType" : "1",
       "QuestionElements" : [
         {
           "IndexNumber" : 0,
-          "TextMessage" : "No formal qualifications",
+          "TextMessage" : "No, my opinion did not change",
           "IsSelected" : false,
           "HasTextInput" : false
         },
         {
           "IndexNumber" : 1,
-          "TextMessage" : "High school",
+          "TextMessage" : "No, but I will research more on the topic",
           "IsSelected" : false,
           "HasTextInput" : false
         },
         {
           "IndexNumber" : 2,
-          "TextMessage" : "Undergraduate or technical diploma",
+          "TextMessage" : "Yes, my opinion changed ",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        }
+      ]
+    },
+    {
+      "AnswerRequired" : true,
+      "QuestionTask" : "Could you tell what you were supposed to do in the game?",
+      "QuestionType" : "1",
+      "QuestionElements" : [
+        {
+          "IndexNumber" : 0,
+          "TextMessage" : "No, I was confused most of the time",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 1,
+          "TextMessage" : "Mostly, although some parts were confusing",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 2,
+          "TextMessage" : "Yes I can tell what I was supposed to do",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        }
+      ]
+    },
+    {
+      "AnswerRequired" : true,
+      "QuestionTask" : "Did you find the game enjoyable?",
+      "QuestionType" : "1",
+      "QuestionElements" : [
+        {
+          "IndexNumber" : 0,
+          "TextMessage" : "Mostly not enjoyable",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 1,
+          "TextMessage" : "Somewhat enjoyable",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 2,
+          "TextMessage" : "Mostly enjoyable",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 2,
+          "TextMessage" : "Very enjoyable",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        }
+      ]
+    },    
+    {
+      "AnswerRequired" : true,
+      "QuestionTask" : "Which statement from the following list best characterizes your opinion?",
+      "QuestionType" : "1",
+      "QuestionElements" : [
+        {
+          "IndexNumber" : 0,
+          "TextMessage" : "Climate change is real, humans are causing it, and humans can fix it",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 1,
+          "TextMessage" : "Climate change is real, humans are causing it, and humans can fix it",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 2,
+          "TextMessage" : "Climate change is real, humans are not causing it, and humans can fix it",
           "IsSelected" : false,
           "HasTextInput" : false
         },
         {
           "IndexNumber" : 3,
-          "TextMessage" : "Graduate",
+          "TextMessage" : "Climate change is real, humans are not causing it, and humans cannot fix it",
           "IsSelected" : false,
           "HasTextInput" : false
         },
         {
           "IndexNumber" : 4,
-          "TextMessage" : "Postgraduate",
+          "TextMessage" : "Climate change is not real",
           "IsSelected" : false,
           "HasTextInput" : false
         }
-      ]
-    }  
+      ]          
+    },
+    {
+      "AnswerRequired" : true,
+      "QuestionTask" : "Which statement best describes you opinion on climate change?",
+      "QuestionType" : "1",
+      "QuestionElements" : [
+        {
+          "IndexNumber" : 0,
+          "TextMessage" : "Unsure or unaware of climate change",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 1,
+          "TextMessage" : "Skeptical or opposed to climate change",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 2,
+          "TextMessage" : "Climate change is real and that human greenhouse-gas emissions are a minor cause",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 3,
+          "TextMessage" : "Climate change is real and that human greenhouse-gas emissions are a significant cause",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        }
+      ]          
+    },
+    {
+      "AnswerRequired" : true,
+      "QuestionTask" : "How serious do you think global warming is to humanity?",
+      "QuestionType" : "1",
+      "QuestionElements" : [
+        {
+          "IndexNumber" : 0,
+          "TextMessage" : "Generally exaggerated",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 1,
+          "TextMessage" : "Generally correct",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 2,
+          "TextMessage" : "Generally underestimated",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        }
+      ]          
+    },
+    {
+      "AnswerRequired" : true,
+      "QuestionTask" : "How well do you feel you understand the topic of climate change?",
+      "QuestionType" : "1",
+      "QuestionElements" : [
+        {
+          "IndexNumber" : 0,
+          "TextMessage" : "Very well",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 1,
+          "TextMessage" : "Fairly well",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 2,
+          "TextMessage" : "Not very well",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 3,
+          "TextMessage" : "Not at all",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        }
+      ]          
+    },
+    {
+      "AnswerRequired" : true,
+      "QuestionTask" : "In your opinion what statement do you think is most accurate?",
+      "QuestionType" : "1",
+      "QuestionElements" : [
+        {
+          "IndexNumber" : 0,
+          "TextMessage" : "Most scientists believe that climate change is happening",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 1,
+          "TextMessage" : "Most scientists believe that climate change is not happening",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 2,
+          "TextMessage" : "Scientist's opinions are split 50/50 on whether climate change is happening",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        },
+        {
+          "IndexNumber" : 3,
+          "TextMessage" : "Most scientists are unsure if climate change is happening",
+          "IsSelected" : false,
+          "HasTextInput" : false
+        }
+      ]          
+    }      
   ]
 }

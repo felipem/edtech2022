@@ -7,7 +7,7 @@ using World.Entities;
 public class ShopItem : MonoBehaviour
 {
     [SerializeField] private Button button;
-    [SerializeField] private Text name;
+    [SerializeField] private new Text name;
     [SerializeField] private Image image;
     private EntityPlacer placer;
     private ContentPanelController controller;

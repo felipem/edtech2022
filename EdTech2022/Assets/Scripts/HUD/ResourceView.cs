@@ -91,7 +91,10 @@ public class ResourceView : MonoBehaviour
             resStatHintInstance = Instantiate(resStatHint);
         }
 
-        var stat = resources.GetResourceBalanceFor(type);
+        var enumType = type;
+        if (!string.IsNullOrEmpty(type) && type.EndsWith("Panel"))
+            enumType = type.Replace("Panel", "");
+        var stat = resources.GetResourceBalanceFor(enumType);
         resStatHintInstance.transform.SetParent(sliderTransform[type], false);
         resStatHintInstance.ShowHint(stat);
     }

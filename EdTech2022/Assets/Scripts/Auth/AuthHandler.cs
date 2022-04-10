@@ -22,7 +22,7 @@ public class AuthHandler : MonoBehaviour
     private FirebaseAuthProvider authProvider;
 
     private System.Action<FirebaseCredentials> onLoginSuccess;
-    private System.Action<string> onLoginError;
+    //private System.Action<string> onLoginError;
 
     private static bool created = false;
     public FirebaseCredentials CurrentAuth
@@ -79,7 +79,7 @@ public class AuthHandler : MonoBehaviour
     public void LoginError(string error)
     {
         Debug.Log(error);
-        onLoginError(error);
+        //onLoginError(error);
     }
     // Update is called once per frame
     public class FirebaseCredentials

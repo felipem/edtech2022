@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resources: {fileID: 11400000, guid: feadfafde86658241973655fa681ecfd, type: 2}
   outlineCubePrefab: {fileID: 5488795178715536833, guid: a4ca28ad46d19e942a96bc21fe204aca, type: 3}
-  redTransparentMat: {fileID: 2100000, guid: a79b57a2d8c394cd1bd9e835b85b39f1, type: 2}
-  greenTransparentMat: {fileID: 2100000, guid: 0176d1e58432740bc9c829a00d45ed81, type: 2}
+  redTransparentMat: {fileID: 2100000, guid: f00b7ff7fa2e49f439a2781045e60055, type: 2}
+  greenTransparentMat: {fileID: 2100000, guid: 68e3c7e24f5c4b2458257f55b849a85b, type: 2}

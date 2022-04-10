@@ -717,9 +717,9 @@ RectTransform:
   m_Father: {fileID: 1498140032}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 300}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -174}
   m_SizeDelta: {x: 1500, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &402106109
@@ -993,6 +993,7 @@ MonoBehaviour:
   questionBehaviour: {fileID: 1923899952}
   SubmitPanelPrefab: {fileID: 1886234787849254, guid: 5a5809b1bf2ef489bba0e6f69763ff46, type: 3}
   QuestionNotAnsweredPanelPrefab: {fileID: 1211943485305324, guid: b5d13d51c8ed64f6f8669679526c700b, type: 3}
+  Presurvey: 0
 --- !u!114 &545854310
 MonoBehaviour:
   m_ObjectHideFlags: 0
