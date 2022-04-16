@@ -82,7 +82,7 @@ namespace HUD
                 if (!research.isResearched)
                 {
                     researchButton.onClick.AddListener(() =>
-                    {
+                    {                        
                         if (entity.Research(research))
                         {
                             UpdateInformation();
@@ -121,6 +121,10 @@ namespace HUD
 
         public void UpgradeEntity()
         {
+            if (!entity.HasEnoughMoneyUpgrade())
+            {
+
+            }
             if (entity.Upgrade())
             {
                 UpdateInformation();

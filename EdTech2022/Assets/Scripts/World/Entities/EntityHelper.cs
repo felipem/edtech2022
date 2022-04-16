@@ -22,6 +22,11 @@ namespace World.Entities {
           resources.Money -= res.cost;
         }
 
+        public bool HasEnoughMoney(int cost)
+        {
+            return resources.Money - cost > 0;
+        }
+
         public bool UpgradeIfEnoughMoney(int cost)
         {
             if (resources.Money - cost > 0)

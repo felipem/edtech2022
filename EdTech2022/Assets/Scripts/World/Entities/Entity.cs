@@ -76,6 +76,12 @@ namespace World.Entities
             entityHelper.Destruct(Stats);
         }
 
+        public virtual bool HasEnoughMoneyUpgrade()
+        {
+            int upgradeCost = GetUpgradeCost();
+            return entityHelper.HasEnoughMoney(upgradeCost);
+        }
+
         // upgrade method can be overwritten to provide upgrade criteria i.e electricity must be > 
         // base functionality checks base level + cost
         public virtual bool Upgrade()
@@ -113,14 +119,14 @@ namespace World.Entities
                 if (HUD)    {
                     var warning = HUD.transform.Find("OutOfMoneyWarning");
                     if (warning)    {
-                        warning.position = new Vector2(230, Input.mousePosition.y);
                         warning.gameObject.SetActive(true);
+                        warning.position = new Vector2(warning.position.x, Input.mousePosition.y);                        
                         Invoke("HideCostWarning", 4);
                     }
                 }
             }
 
-            Debug.Log("not enough shmoneys");
+            Debug.Log("not enough money");
             return false;
         }
 
