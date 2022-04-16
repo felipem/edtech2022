@@ -21,5 +21,6 @@ MonoBehaviour:
       power: 75
       environment: 0
     researchOptions: []
+    upgradeText: You are already maxed out
   description: The wind turbine converts wind to power which is good for the environment
     as no C02 released

@@ -1,17 +1,18 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using World;
 using World.Entities;
 
 namespace HUD
 {
-    public class UpgradeInformationController : EntityInformationController
-    {
+    public class UpgradeInformationController : EntityInformationController { 
         [SerializeField] private Text level;
         [SerializeField] private Button upgradeButton;
         [SerializeField] private Button closeUpgradePanelButton;
         [SerializeField] private Button[] researchButtons;
+        [SerializeField] private GameObject[] researchTooltips;
         [SerializeField] private Text description;
         [SerializeField] private RectTransform contentPanelRectTransform;
         [SerializeField] private GameBoard gameBoard;
@@ -24,6 +25,7 @@ namespace HUD
 
         void Awake()
         {
+            
             // set singleton instance
             instance = this;
             gameObject.SetActive(false);
@@ -68,11 +70,15 @@ namespace HUD
                 researchButton.gameObject.SetActive(true);
                 researchButton.GetComponentInChildren<Text>().text = research.Name;
 
+                var tooltip = researchTooltips[index];
+                tooltip.GetComponentInChildren<Text>().text =research.ResearchDescription;               
+
                 // If research already done, button disabled
                 researchButton.interactable = !research.isResearched;
 
                 // Callback
                 researchButton.onClick.RemoveAllListeners();
+
                 if (!research.isResearched)
                 {
                     researchButton.onClick.AddListener(() =>
@@ -150,15 +156,64 @@ namespace HUD
 
         public void OnMouseEnterButton()
         {
-            if (!entity.IsMaxLevel() && IsEntityLocked())
+            if (IsEntityLocked())
             {
-                upgradeToolTip.SetActive(true);
+                upgradeToolTip.GetComponentInChildren<Text>().text = $"Town hall needs to be upgraded before upgrading {entity.Type}";
             }
+            else
+            {
+                upgradeToolTip.GetComponentInChildren<Text>().text = entity.UpgradeText;
+            }                
+
+            upgradeToolTip.SetActive(true);
         }
 
         public void OnMouseExitButton()
         {
             upgradeToolTip.SetActive(false);
+        }
+
+        public void OnMouseEnterResearch1Button()
+        {
+            var researchTooltip = researchTooltips[0];
+
+            researchTooltip.SetActive(true);
+        }
+
+        public void OnMouseExitResearch1Button()
+        {
+            var researchTooltip = researchTooltips[0];
+
+            researchTooltip.SetActive(false);
+        }
+
+        public void OnMouseEnterResearch2Button()
+        {
+            var researchTooltip = researchTooltips[1];
+
+
+            researchTooltip.SetActive(true);
+        }
+
+        public void OnMouseExitResearch2Button()
+        {
+            var researchTooltip = researchTooltips[1];
+
+            researchTooltip.SetActive(false);
+        }
+
+        public void OnMouseEnterResearch3Button()
+        {
+            var researchTooltip = researchTooltips[2];
+
+            researchTooltip.SetActive(true);
+        }
+
+        public void OnMouseExitResearch3Button()
+        {
+            var researchTooltip = researchTooltips[2];
+
+            researchTooltip.SetActive(false);
         }
     }
 }

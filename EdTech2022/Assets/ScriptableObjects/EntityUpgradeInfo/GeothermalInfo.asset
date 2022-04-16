@@ -21,5 +21,6 @@ MonoBehaviour:
       power: 150
       environment: 0
     researchOptions: []
+    upgradeText: You are already maxed out
   description: Geothermal Power Plants use the earths heat to produce power and have
     less impact on the environment

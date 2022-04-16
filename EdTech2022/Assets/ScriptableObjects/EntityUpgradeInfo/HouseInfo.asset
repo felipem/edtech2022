@@ -21,7 +21,7 @@ MonoBehaviour:
       power: -20
       environment: 0
     researchOptions:
-    - name: Power Circuit Upgrades (1000 CC)
+    - name: Power Circuit Upgrades (1000)
       researchDiff:
         cost: 1000
         money: 0
@@ -29,7 +29,8 @@ MonoBehaviour:
         shelter: 0
         power: 5
         environment: 0
-    - name: Increased Density (1000 CC)
+      researchDescription: Build a better circuit improving power
+    - name: Increased Density (1000)
       researchDiff:
         cost: 1000
         money: 0
@@ -37,6 +38,8 @@ MonoBehaviour:
         shelter: 5
         power: 0
         environment: 0
+      researchDescription: Increase housing density (more people in shelter)
+    upgradeText: Upgrade to double housing capacity
   - baseStats:
       cost: 1000
       money: 0
@@ -45,7 +48,7 @@ MonoBehaviour:
       power: -20
       environment: 0
     researchOptions:
-    - name: Improved Room Layout (5000 CC)
+    - name: Improved Room Layout (5000)
       researchDiff:
         cost: 5000
         money: 0
@@ -53,7 +56,8 @@ MonoBehaviour:
         shelter: 10
         power: 0
         environment: 0
-    - name: Improved House Placement (5000 CC)
+      researchDescription: More efficient use of space allowing more sheltered people
+    - name: Improved House Placement (5000)
       researchDiff:
         cost: 5000
         money: 0
@@ -61,6 +65,9 @@ MonoBehaviour:
         shelter: 10
         power: 0
         environment: 0
+      researchDescription: More efficient use of properties allowing more sheltered
+        people
+    upgradeText: Upgrade to double housing capacity but increase power requirements
   - baseStats:
       cost: 5000
       money: 0
@@ -69,7 +76,7 @@ MonoBehaviour:
       power: -30
       environment: 0
     researchOptions:
-    - name: Advanced Room Layout (20000 CC)
+    - name: Advanced Room Layout (20000)
       researchDiff:
         cost: 20000
         money: 0
@@ -77,7 +84,9 @@ MonoBehaviour:
         shelter: 10
         power: 0
         environment: 0
-    - name: Advanced Housing Density (20000 CC)
+      researchDescription: Significantly better layouts to allow more shelter for
+        people
+    - name: Advanced Housing Density (20000)
       researchDiff:
         cost: 20000
         money: 0
@@ -85,4 +94,6 @@ MonoBehaviour:
         shelter: 10
         power: 0
         environment: 0
-  description: 
+      researchDescription: Build taller building to allow more housing
+    upgradeText: You are already maxed out
+  description: Houses provide shelter but require power

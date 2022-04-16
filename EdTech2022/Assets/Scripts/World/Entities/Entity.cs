@@ -60,6 +60,11 @@ namespace World.Entities
 
         public int Level { get; set; } = 1; // level starts at 1 currently- upgradable 2 times
         public int MaxLevel => UpgradeInfo.NumberOfLevels;
+        public string UpgradeText { get
+            {
+                return UpgradeInfo.GetLevel(Level).UpgradeText;
+            }
+        }
 
         public virtual void Construct()
         {

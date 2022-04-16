@@ -21,7 +21,7 @@ MonoBehaviour:
       power: 0
       environment: -20
     researchOptions:
-    - name: Methane Trapping (1000 CC)
+    - name: Methane Trapping (1000)
       researchDiff:
         cost: 1000
         money: 0
@@ -29,7 +29,9 @@ MonoBehaviour:
         shelter: 0
         power: 0
         environment: 5
-    - name: Seed Enhancement (1000 CC)
+      researchDescription: Capture methane produced by livestock reducing environmental
+        cost
+    - name: Seed Enhancement (1000)
       researchDiff:
         cost: 1000
         money: 0
@@ -37,6 +39,9 @@ MonoBehaviour:
         shelter: 0
         power: 0
         environment: 5
+      researchDescription: Technologies such as seed priming and seed coating improving
+        yield and decreasing emissions
+    upgradeText: Upgrade to double food production but increase environmental cost
   - baseStats:
       cost: 1000
       money: 0
@@ -45,7 +50,7 @@ MonoBehaviour:
       power: 0
       environment: -30
     researchOptions:
-    - name: Methane Reuse Program (5000 CC)
+    - name: Methane Reuse Program (5000)
       researchDiff:
         cost: 5000
         money: 0
@@ -53,7 +58,8 @@ MonoBehaviour:
         shelter: 0
         power: 0
         environment: 10
-    - name: Cow Hybrid Technology (5000 CC)
+      researchDescription: Reuse captured methane for other purposes reducing emissions
+    - name: Cow Hybrid Technology (5000)
       researchDiff:
         cost: 5000
         money: 0
@@ -61,6 +67,8 @@ MonoBehaviour:
         shelter: 0
         power: 0
         environment: 10
+      researchDescription: Build better, healthier livestock reducing emissions
+    upgradeText: Upgrade for 1.5x food production but increase environmental cost
   - baseStats:
       cost: 5000
       money: 0
@@ -69,7 +77,7 @@ MonoBehaviour:
       power: 0
       environment: -50
     researchOptions:
-    - name: Advanced Filtration (20000 CC)
+    - name: Advanced Filtration (20000)
       researchDiff:
         cost: 20000
         money: 0
@@ -77,7 +85,9 @@ MonoBehaviour:
         shelter: 0
         power: 0
         environment: 20
-    - name: Advanced Seed Reasearch (20000 CC)
+      researchDescription: Build better water and waste filterations causing an environmental
+        cost but producing more food
+    - name: Advanced Seed Research (20000)
       researchDiff:
         cost: 20000
         money: 0
@@ -85,5 +95,7 @@ MonoBehaviour:
         shelter: 0
         power: 0
         environment: 20
-  description: Farms produce but if they have cows also release methane which is a
-    greenhouse gas.
+      researchDescription: Build better seeds that absorb emissions
+    upgradeText: You are already maxed out
+  description: Farms produce but if they have cows also release methane which is
+    a greenhouse gas.

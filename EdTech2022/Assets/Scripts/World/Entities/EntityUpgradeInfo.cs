@@ -17,7 +17,7 @@ namespace World.Entities
 
         public LevelInfo GetLevel(int level) {
             if (level > levelInfo.Length) {
-                Debug.LogError("level doesn't exist lmao\n This is a big fucky wucky");
+                Debug.LogError("level doesn't exist");
                 return new LevelInfo();
             }
             return levelInfo[level - 1];
@@ -31,16 +31,21 @@ namespace World.Entities
     public class LevelInfo {
         [SerializeField] private EntityStats baseStats;
         [SerializeField] private ResearchOption[] researchOptions;
+        [SerializeField] private string upgradeText;
         public ResearchOption[] ResearchOptions => researchOptions;
         public EntityStats BaseStats => baseStats;
+        public string UpgradeText => upgradeText;
     }
 
     [Serializable]
     public class ResearchOption {
         [SerializeField] private string name;
         [SerializeField] private EntityStats researchDiff;
+        [SerializeField] private string researchDescription;
+
         [NonSerialized] public bool isResearched;
         public String Name => name;
+        public String ResearchDescription => researchDescription;
         public EntityStats ResearchDiff => researchDiff;
     }
 }

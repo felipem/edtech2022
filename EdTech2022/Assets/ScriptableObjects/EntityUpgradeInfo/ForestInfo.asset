@@ -21,4 +21,5 @@ MonoBehaviour:
       power: 0
       environment: 20
     researchOptions: []
-  description: 
+    upgradeText: You can't upgrade trees...or can you?
+  description: Represents forest and nature reducing carbon in the atmosphere

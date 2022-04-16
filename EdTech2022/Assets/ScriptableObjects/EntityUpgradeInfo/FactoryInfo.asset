@@ -21,7 +21,7 @@ MonoBehaviour:
       power: -20
       environment: -20
     researchOptions:
-    - name: Clean air filters (1000 CC)
+    - name: Clean air filters (1000)
       researchDiff:
         cost: 1000
         money: 0
@@ -29,7 +29,8 @@ MonoBehaviour:
         shelter: 0
         power: 0
         environment: 5
-    - name: Reduce waste (1000 CC)
+      researchDescription: Build cleaner air filteration reducing emissions
+    - name: Reduce waste (1000)
       researchDiff:
         cost: 1000
         money: 0
@@ -37,6 +38,10 @@ MonoBehaviour:
         shelter: 0
         power: 0
         environment: 5
+      researchDescription: Build better systems with reduced waste (and environmental
+        cost)
+    upgradeText: Upgrade to double money made but increase power and environmental
+      cost
   - baseStats:
       cost: 1000
       money: 30
@@ -45,7 +50,7 @@ MonoBehaviour:
       power: -30
       environment: -30
     researchOptions:
-    - name: Recycling Program (5000 CC)
+    - name: Recycling Program (5000)
       researchDiff:
         cost: 5000
         money: 0
@@ -53,7 +58,9 @@ MonoBehaviour:
         shelter: 0
         power: 0
         environment: 8
-    - name: Eco Friendly Packaging (5000 CC)
+      researchDescription: Build a better recycling system reducing environmental
+        cost
+    - name: Eco Friendly Packaging (5000)
       researchDiff:
         cost: 5000
         money: 0
@@ -61,6 +68,9 @@ MonoBehaviour:
         shelter: 0
         power: 0
         environment: 8
+      researchDescription: Build products with eco friendly packaging
+    upgradeText: Upgrade to double money made but increase power and environmental
+      cost
   - baseStats:
       cost: 10000
       money: 60
@@ -69,7 +79,7 @@ MonoBehaviour:
       power: -40
       environment: -40
     researchOptions:
-    - name: Advanced Materials (20000 CC)
+    - name: Advanced Materials (20000)
       researchDiff:
         cost: 20000
         money: 0
@@ -77,7 +87,8 @@ MonoBehaviour:
         shelter: 0
         power: 0
         environment: 15
-    - name: Advanced Air Filtration (20000 CC)
+      researchDescription: Use better materials or materials made from CO2
+    - name: Advanced Air Filtration (20000)
       researchDiff:
         cost: 20000
         money: 0
@@ -85,4 +96,8 @@ MonoBehaviour:
         shelter: 0
         power: 0
         environment: 15
-  description: Factories give you income but also cause greenhouse gases causing pollution
+      researchDescription: Build an even better filtration system that comes close
+        to net zero emissions
+    upgradeText: You are already maxed out
+  description: Factories give you income but also cause greenhouse gases causing
+    pollution

@@ -21,7 +21,7 @@ MonoBehaviour:
       power: 20
       environment: -20
     researchOptions:
-    - name: Carbon Filtration (1000 CC)
+    - name: Carbon Filtration (1000)
       researchDiff:
         cost: 1000
         money: 0
@@ -29,7 +29,8 @@ MonoBehaviour:
         shelter: 0
         power: 0
         environment: 10
-    - name: Advanced Generation (1000 CC)
+      researchDescription: Capture carbon before reaching atmosphere
+    - name: Advanced Generation (1000)
       researchDiff:
         cost: 1000
         money: 0
@@ -37,6 +38,8 @@ MonoBehaviour:
         shelter: 0
         power: 10
         environment: 0
+      researchDescription: Build a better power system improving power output
+    upgradeText: Upgrade to double power capacity but double power requirements
   - baseStats:
       cost: 1000
       money: 0
@@ -45,7 +48,7 @@ MonoBehaviour:
       power: 40
       environment: -40
     researchOptions:
-    - name: Future Generation (5000 CC)
+    - name: Future Generation (5000)
       researchDiff:
         cost: 5000
         money: 0
@@ -53,7 +56,8 @@ MonoBehaviour:
         shelter: 0
         power: 20
         environment: 0
-    - name: Advanced Carbon Trapping (5000 CC)
+      researchDescription: Build next generation power system
+    - name: Advanced Carbon Trapping (5000)
       researchDiff:
         cost: 5000
         money: 0
@@ -61,6 +65,8 @@ MonoBehaviour:
         shelter: 0
         power: 0
         environment: 20
+      researchDescription: Capture even more carbon before emmisions
+    upgradeText: Upgrade to 2.5x power capacity but double power requirements
   - baseStats:
       cost: 5000
       money: 0
@@ -69,7 +75,7 @@ MonoBehaviour:
       power: 100
       environment: -80
     researchOptions:
-    - name: Emission Reduction (20000 CC)
+    - name: Emission Reduction (20000)
       researchDiff:
         cost: 20000
         money: 0
@@ -77,7 +83,9 @@ MonoBehaviour:
         shelter: 0
         power: 0
         environment: 50
-    - name: High Power Fuel (20000 CC)
+      researchDescription: Build a a better power system that reduces a significant
+        amount of emissions
+    - name: High Power Fuel (20000)
       researchDiff:
         cost: 20000
         money: 0
@@ -85,5 +93,8 @@ MonoBehaviour:
         shelter: 0
         power: 50
         environment: 0
-  description: Powerstations burn fossil fuels to make power and aren't good for the
-    environment
+      researchDescription: Find fuel sources that provide a large amount of power
+        with little cost
+    upgradeText: You are already maxed out
+  description: Powerstations burn fossil fuels to make power and aren't good for
+    the environment

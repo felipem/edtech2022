@@ -105,7 +105,8 @@ public class EndScreenController : MonoBehaviour
         loader.SetActive(true);
         SceneManager.sceneLoaded += (scene, mode) =>
         {
-            loader.SetActive(false);
+            if (loader != null)
+                loader.SetActive(false);
         };
     }
 
@@ -116,7 +117,8 @@ public class EndScreenController : MonoBehaviour
         loader.SetActive(true);
         SceneManager.sceneLoaded += (scene, mode) =>
         {
-            loader.SetActive(false);
+            if (loader != null)
+                loader.SetActive(false);
         };
     }
 }

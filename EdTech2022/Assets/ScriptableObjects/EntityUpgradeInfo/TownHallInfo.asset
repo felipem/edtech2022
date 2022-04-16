@@ -21,6 +21,7 @@ MonoBehaviour:
       power: 50
       environment: 0
     researchOptions: []
+    upgradeText: Upgrade to so you can upgrade other shop items
   - baseStats:
       cost: 10000
       money: 0
@@ -29,6 +30,7 @@ MonoBehaviour:
       power: 50
       environment: 0
     researchOptions: []
+    upgradeText: Upgrade to win the game (you can still keep playing)
   - baseStats:
       cost: 50000
       money: 0
@@ -37,4 +39,5 @@ MonoBehaviour:
       power: 50
       environment: 0
     researchOptions: []
+    upgradeText: You are already maxed out
   description: The townhall is the center of your island

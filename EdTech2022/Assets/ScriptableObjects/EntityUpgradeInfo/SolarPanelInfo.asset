@@ -21,4 +21,5 @@ MonoBehaviour:
       power: 120
       environment: 0
     researchOptions: []
+    upgradeText: You are already maxed out
   description: Solar panels generate electricity from the suns energy
