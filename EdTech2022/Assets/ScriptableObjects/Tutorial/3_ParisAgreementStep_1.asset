@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2aaecce5da4464a8d3c375d955bf957, type: 3}
+  m_Script: {fileID: 11500000, guid: f3edeaf45461bbe41b1ab8b888238091, type: 3}
   m_Name: 3_ParisAgreementStep_1
   m_EditorClassIdentifier: 
-  title: Ewan
-  description: "Being a part of the Paris Agreement means you\u2019ve committed to
-    keeping global temperature rise below 2\u2103, and you\u2019ll also have over
-    200 other states worldwide working with you!"
+  title: 
+  description: The aim of the game is to try and keep your growing population fed
+    (the Pizza icon) and sheltered (the House icon) while maintaining the environment
+    (the Leaf icon). Everything needs electricity (the Bolt icon)
   successMessage: 

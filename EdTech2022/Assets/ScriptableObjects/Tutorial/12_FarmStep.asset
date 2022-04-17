@@ -9,11 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e5c3103565d48788bab4773905bc743, type: 3}
+  m_Script: {fileID: 11500000, guid: 8218afa0672bef64bb205d2ed3456967, type: 3}
   m_Name: 12_FarmStep
   m_EditorClassIdentifier: 
-  title: Ewan
-  description: You'll probably need some food, let's go ahead and build a farm by
-    clicking the farm icon on the right.
-  successMessage: I was getting hungry, Thanks!
+  title: 
+  description: Finally the population needs some food or else they will starve. Create
+    a Farm to feed the masses.
+  successMessage: '
+
+    Great!'
   entityToDetect: 4

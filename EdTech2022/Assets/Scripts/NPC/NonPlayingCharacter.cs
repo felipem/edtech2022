@@ -12,8 +12,7 @@ public class NonPlayingCharacter : MonoBehaviour
 
     private Color[] colours;
     private Renderer[] renderers;
-
-    //private TweetGenerator tweetGenerator;
+    
     private NavMeshAgent agent;
 
     public string FirstName { get; set; }
@@ -25,7 +24,6 @@ public class NonPlayingCharacter : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         // get singleton instances
-        //tweetGenerator = TweetGenerator.Instance;
 
         // get renderers of npc model components
         renderers = GetComponentsInChildren<Renderer>();
@@ -73,32 +71,6 @@ public class NonPlayingCharacter : MonoBehaviour
 
     private void OnMouseDown()
     {
-        // npc achievement logic
-        var npcAchievement = GameObject.Find("SocialiserAchievement");
-        if (npcAchievement)
-        {
-            var achv = npcAchievement.GetComponent<AchievementSocialite>();
-            if (achv)
-            {
-                achv.OnTalkTo();
-            }
-        }
-
-        string fullName = FirstName + " " + LastName;
-
-        // calculate surplus/shortage of resources
-        var envBalance = resourceSingleton.totalSupply.environment - resourceSingleton.totalDemand.environment;
-        var powerBalance = resourceSingleton.totalSupply.power - resourceSingleton.totalDemand.power;
-        var foodBalance = resourceSingleton.totalSupply.food - resourceSingleton.totalDemand.food;
-        var shelterBalance = resourceSingleton.totalSupply.shelter - resourceSingleton.totalDemand.shelter;
-
-        // generate tweet based on resources
-        string tweet = "";//tweetGenerator.GenerateTweet(foodBalance, powerBalance, shelterBalance, envBalance);
-        tweet = "\"" + tweet + "\"";
-        TextInfo info = new CultureInfo("en-US", false).TextInfo;
-        string occupationTitleCase = info.ToTitleCase(Occupation);
-
-        // show the npc dialogue
-        NPCPanelController.Instance.Show(fullName, occupationTitleCase, tweet, avatar);
+    
     }
 }

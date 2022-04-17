@@ -9,11 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 355fae3da8284a90ab512427b47ac362, type: 3}
+  m_Script: {fileID: 11500000, guid: a5dbc15fa4e07574e8587b1e19436881, type: 3}
   m_Name: 6_ZoomStep
   m_EditorClassIdentifier: 
-  title: Ewan
+  title: 
   description: "You can also zoom in with Z and zoom out with X.\n \n(Hint: Hit Z
-    and X to continue)"
-  successMessage: Nice!
-  keys: 7a00000078000000
+    and X on the keyboard)"
+  successMessage: '
+
+    Great!'
+  keys: 

@@ -10,8 +10,7 @@ namespace HUD
      * Handles displaying of simple text prompts and supports multiple pages
      */
     public class SimpleDialogueManager : MonoBehaviour
-    {
-        [SerializeField] private Text titleText;
+    {        
         [SerializeField] private Text descriptionText;
         [SerializeField] private GameObject dialoguePanel;
 
@@ -67,7 +66,7 @@ namespace HUD
             currentDialogue = dialgoue;
             dialogueIndex = 0;
             dialoguePanel.SetActive(true);
-            titleText.text = currentDialogue.dialogueTitle;
+            
             DisplayNextSentence(currentDialogue.dialogue[dialogueIndex]);
         }
 
@@ -103,7 +102,6 @@ namespace HUD
         {
             dialoguePanel.SetActive(false);
 
-            titleText.text = "";
             descriptionText.text = "";
 
             currentDialogue = null;
@@ -115,10 +113,10 @@ namespace HUD
          */
         private void DisplayNextSentence(string description)
         {
-            descriptionText.text = "";
+            descriptionText.text = description;
 
-            StopAllCoroutines();
-            StartCoroutine(TypeSentence(description));
+            //StopAllCoroutines();
+            //StartCoroutine(TypeSentence(description));
         }
 
         /**

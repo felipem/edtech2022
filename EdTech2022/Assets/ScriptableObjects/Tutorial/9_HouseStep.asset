@@ -9,13 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e5c3103565d48788bab4773905bc743, type: 3}
+  m_Script: {fileID: 11500000, guid: 8218afa0672bef64bb205d2ed3456967, type: 3}
   m_Name: 9_HouseStep
   m_EditorClassIdentifier: 
-  title: Ewan
-  description: Lets give those power plant workers a place to live. Create a house
-    for your new citizens.
+  title: 
+  description: Lets give those population a place to live. Create a House for your
+    new citizens.
   successMessage: '
 
-    Nice! Now your citizens have a place to sleep!'
+    Nice! Houses provide shelter. We don''t want our citizens
+    to be homeless!'
   entityToDetect: 1

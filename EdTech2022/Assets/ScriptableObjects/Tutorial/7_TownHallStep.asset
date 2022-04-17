@@ -9,11 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e5c3103565d48788bab4773905bc743, type: 3}
+  m_Script: {fileID: 11500000, guid: 8218afa0672bef64bb205d2ed3456967, type: 3}
   m_Name: 7_TownHallStep
   m_EditorClassIdentifier: 
-  title: Ewan
-  description: 'You probably need somewhere to live so click the TownHall icon on
-    the right and drag it on to the board! '
-  successMessage: Nice! You have a place to live!
+  title: 
+  description: 'To start you need somewhere to live so click the TownHall icon on
+    the right (Shop) and drag it on to the board to a green spot! '
+  successMessage: '
+
+    Nice! Town Hall is the center of the island and provides
+    minimul shelter, power, and food.'
   entityToDetect: 2

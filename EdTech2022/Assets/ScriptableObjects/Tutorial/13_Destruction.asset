@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2aaecce5da4464a8d3c375d955bf957, type: 3}
+  m_Script: {fileID: 11500000, guid: f3edeaf45461bbe41b1ab8b888238091, type: 3}
   m_Name: 13_Destruction
   m_EditorClassIdentifier: 
-  title: Ewan
-  description: Need some space for buildings? You can destroy buildings or trees by
-    using the bulldozer on the right. Remember to replant any trees though!
+  title: 
+  description: Need some space for buildings? You can destroy buildings or trees
+    by using the bulldozer on the right. Remember to replant any trees though or
+    your environment goes downhill.
   successMessage: 
