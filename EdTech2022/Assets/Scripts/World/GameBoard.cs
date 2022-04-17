@@ -224,6 +224,7 @@ namespace World
             SerializableWorld updatedWorld = new SerializableWorld(Tiles, resources);
             updatedWorld.Name = persistenceManager.SelectedWorld.world.Name;
             updatedWorld.CreationTime = persistenceManager.SelectedWorld.world.CreationTime;
+            updatedWorld.PlayEndTime = DateTime.UtcNow.ToString();
             updatedWorld.IsTutorialCompleted = persistenceManager.SelectedWorld.world.IsTutorialCompleted;
                 
             

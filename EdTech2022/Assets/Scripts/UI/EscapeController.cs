@@ -94,6 +94,7 @@ public class EscapeController : MonoBehaviour
 
     public void BackButtonSurveyOnClick()
     {
+        board.SaveActiveWorld();
         // load main scene
         Resume();
         board.ActiveWorld = null;
@@ -107,6 +108,8 @@ public class EscapeController : MonoBehaviour
 
     public void BackButtonOnClick()
     {
+        board.SaveActiveWorld();
+
         // load main scene
         Resume();
         board.ActiveWorld = null;
@@ -114,7 +117,8 @@ public class EscapeController : MonoBehaviour
         loader.SetActive(true);
         SceneManager.sceneLoaded += (scene, mode) =>
         {
-            loader.SetActive(false);
+            if (loader!= null)
+                loader.SetActive(false);
         };
     }
 

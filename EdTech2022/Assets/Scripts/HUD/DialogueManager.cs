@@ -112,17 +112,11 @@ namespace Tutorial
         {
             descriptionText.text = fullDescriptionText;
             descriptionText.text += "\n" + textToAppend;
-            //StopAllCoroutines();
-            //StartCoroutine(TypeSentence("\n" + textToAppend));
         }
 
         public void DisplayNextSentence(string description)
         {
             descriptionText.text = description;
-
-            //StopAllCoroutines();
-            //StartCoroutine(TypeSentence(description));
-            //Debug.Log(description);
         }
 
         public bool ContinueInteractable

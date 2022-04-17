@@ -40,17 +40,12 @@ namespace Persistence
       
         public void SaveGameState(ServerWorld world)
         {
-
-            string serializedObject = JsonConvert.SerializeObject(world, serializationSettings);
-            Debug.Log(serializedObject);
-            
             APIService.Instance.UpdateWorld(world, world.id);
         }
         
         
         public void DeleteWorld(ServerWorld serverWorld)
         {
-
             APIService.Instance.DeleteWorld(serverWorld.id);
         }
 

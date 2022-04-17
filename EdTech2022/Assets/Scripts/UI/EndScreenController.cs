@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using World;
 using World.Tiles;
 
 public class EndScreenController : MonoBehaviour
@@ -13,12 +14,12 @@ public class EndScreenController : MonoBehaviour
     private EscapeController escapeController;
 
     private List<GameObject> elementsOff;
-
+    private GameBoard board;
     // Start is called before the first frame update
     private void Start()
     {
         escapeController = gameObject.GetComponent<EscapeController>();
-
+        board = FindObjectOfType<GameBoard>();
         winMenuUI.SetActive(false);
     }
 
@@ -100,6 +101,7 @@ public class EndScreenController : MonoBehaviour
 
     public void MainMenuButtonOnClick()
     {
+        board.SaveActiveWorld();
         // show spinner/loader and switch scenes
         SceneManager.LoadScene("LoginUIScene", LoadSceneMode.Single);
         loader.SetActive(true);
@@ -112,6 +114,7 @@ public class EndScreenController : MonoBehaviour
 
     public void MainMenuButtonSurveyOnClick()
     {
+        board.SaveActiveWorld();
         // show spinner/loader and switch scenes
         SceneManager.LoadScene("EndSurveyScene", LoadSceneMode.Single);
         loader.SetActive(true);

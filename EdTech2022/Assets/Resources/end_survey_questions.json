@@ -94,24 +94,18 @@
         },
         {
           "IndexNumber" : 1,
-          "TextMessage" : "Climate change is real, humans are causing it, and humans can fix it",
-          "IsSelected" : false,
-          "HasTextInput" : false
-        },
-        {
-          "IndexNumber" : 2,
           "TextMessage" : "Climate change is real, humans are not causing it, and humans can fix it",
           "IsSelected" : false,
           "HasTextInput" : false
         },
         {
-          "IndexNumber" : 3,
+          "IndexNumber" : 2,
           "TextMessage" : "Climate change is real, humans are not causing it, and humans cannot fix it",
           "IsSelected" : false,
           "HasTextInput" : false
         },
         {
-          "IndexNumber" : 4,
+          "IndexNumber" : 3,
           "TextMessage" : "Climate change is not real",
           "IsSelected" : false,
           "HasTextInput" : false

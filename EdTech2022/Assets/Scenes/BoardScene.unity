@@ -2145,7 +2145,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 69.35, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &320758006
@@ -2783,7 +2783,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1072447862}
         m_TargetAssemblyTypeName: EndScreenController, Assembly-CSharp
-        m_MethodName: MainMenuButtonOnClick
+        m_MethodName: MainMenuButtonSurveyOnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6896,6 +6896,7 @@ MonoBehaviour:
   - {fileID: 1320868031}
   - {fileID: 27389771}
   - {fileID: 1117109918}
+  - {fileID: 1401447300}
   loader: {fileID: 1783039224}
   escapeUIObj: {fileID: 1095858364}
 --- !u!114 &1072447862
@@ -6917,6 +6918,7 @@ MonoBehaviour:
   - {fileID: 1320868031}
   - {fileID: 27389771}
   - {fileID: 1117109918}
+  - {fileID: 1401447300}
   loader: {fileID: 1783039224}
 --- !u!1 &1095858364
 GameObject:

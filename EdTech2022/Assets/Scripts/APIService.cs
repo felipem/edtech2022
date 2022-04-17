@@ -120,7 +120,7 @@ public class APIService : MonoBehaviour
             {
                 if (www.isDone)
                 {
-                    Debug.Log("done");
+                    Debug.Log("done updating via URL " + url);
                 }
             }
 
@@ -191,7 +191,8 @@ public class APIService : MonoBehaviour
     public void UpdateWorld(ServerWorld world, string id)
     {
         string url = WORLDS_ENDPOINT + id;
-        string json = JsonConvert.SerializeObject(world);
+        string json = JsonConvert.SerializeObject(world, serializationSettings);
+        Debug.Log(json);
         StartCoroutine(Put(url, json));
     }
 }
