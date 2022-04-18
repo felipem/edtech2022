@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +12,7 @@ public class APIService : MonoBehaviour
     private static string WORLDS_ENDPOINT = BASE_ENDPOINT + "worlds/";
     private static string PRE_SURVEY_ENDPOINT = BASE_ENDPOINT + "surveypre/";
     private static string POST_SURVEY_ENDPOINT = BASE_ENDPOINT + "surveypost/";
-
+    private static string CLICKED_LINK_ENDPOINT = BASE_ENDPOINT + "clickedLink/";
     public string access_token { get; set; }
     private static bool created = false;
     void Awake()
@@ -100,6 +101,7 @@ public class APIService : MonoBehaviour
 
         }
     }
+
 
     private IEnumerator Put(string url, string data)
     {
@@ -193,5 +195,11 @@ public class APIService : MonoBehaviour
         string json = JsonConvert.SerializeObject(world, serializationSettings);
         //Debug.Log(json);
         StartCoroutine(Put(url, json));
+    }
+
+    internal void SendClickedLink()
+    {
+        string json = JsonConvert.SerializeObject( new {field="doesnt matter" } , serializationSettings);
+        StartCoroutine(Post(CLICKED_LINK_ENDPOINT, json, (a) => { }));
     }
 }

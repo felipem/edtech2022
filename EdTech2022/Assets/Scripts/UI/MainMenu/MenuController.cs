@@ -12,6 +12,7 @@ public class MenuController : MonoBehaviour
     public GameObject playAnywaysGameButton;
     public GameObject loginPanel;
     public GameObject surveyButton;
+    public GameObject learnMoreButton;
 
     [SerializeField] private WorldManager worldManager;
     [SerializeField] private GameObject loader;
@@ -20,19 +21,30 @@ public class MenuController : MonoBehaviour
     void Start()
     {
         persistenceManager = FindObjectOfType<PersistenceManager>();
-        if (!persistenceManager.InitialSurveyComplete)
+
+        if (!persistenceManager.InitialSurveyComplete && !persistenceManager.SkippedSurvey)
         {
             playGameButton.GetComponentInChildren<Button>().interactable = false;
             playAnywaysGameButton.GetComponentInChildren<Button>().interactable = true;
             surveyButton.SetActive(true);
+            learnMoreButton.SetActive(false);
+        }
+        else if (persistenceManager.PostSurveyComplete || persistenceManager.SkippedSurvey)
+        {
+            playGameButton.GetComponentInChildren<Button>().interactable = true;
+            playAnywaysGameButton.GetComponentInChildren<Button>().interactable = false;
+            surveyButton.SetActive(false);
+            learnMoreButton.SetActive(true);
         }
         else
         {
             playGameButton.GetComponentInChildren<Button>().interactable = true;
             playAnywaysGameButton.GetComponentInChildren<Button>().interactable = false;
             surveyButton.SetActive(false);
+            learnMoreButton.SetActive(false);
         }
     }
+
     public void PlayButtonOnClick()
     {
         playGameButton.GetComponentInChildren<Text>().text = "Retrieving...";
@@ -57,7 +69,17 @@ public class MenuController : MonoBehaviour
 
     public void ExitButtonOnClick()
     {
+        persistenceManager.InitialSurveyComplete = false;
+        persistenceManager.PostSurveyComplete = false;
+        persistenceManager.SkippedSurvey = false;
+
         loginPanel.SetActive(true);
         loginPanel.GetComponent<LoginPanelController>().TriggerLogout();
+    }
+
+    public void LearnMoreButtonOnClick()
+    {
+        APIService.Instance.SendClickedLink();
+        Application.OpenURL("https://github.com/philsturgeon/awesome-earth");
     }
 }

@@ -53,8 +53,8 @@ public class SubmittingBehaviour : UI_AbstractMenuBehaviour {
             {
                 savedCount++;
                 PlayerPrefs.SetInt("SavedCount", savedCount);
-                persistenceManager.InitialSurveyComplete = true;
-
+                persistenceManager.PostSurveyComplete = true;
+                
                 SceneManager.LoadScene("LoginUIScene", LoadSceneMode.Single);
             });
         }

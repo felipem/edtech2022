@@ -1,3 +1,4 @@
+using Persistence;
 using System.Collections.Generic;
 
 using UnityEngine;
@@ -19,10 +20,11 @@ public class EscapeController : MonoBehaviour
     private bool gameIsPaused = false;
     public bool GameIsPaused => gameIsPaused;
     private GameBoard board;
-
+    private PersistenceManager persistenceManager;
     // Start is called before the first frame update
     private void Start()
     {
+        persistenceManager = FindObjectOfType<PersistenceManager>();
         escapeUIObj.SetActive(false);
         board = FindObjectOfType<GameBoard>();
         InvalidateSharingUI();
@@ -102,14 +104,15 @@ public class EscapeController : MonoBehaviour
         loader.SetActive(true);
         SceneManager.sceneLoaded += (scene, mode) =>
         {
-            loader.SetActive(false);
+            if (loader != null)
+                loader.SetActive(false);
         };
     }
 
     public void BackButtonOnClick()
     {
         board.SaveActiveWorld();
-
+        persistenceManager.SkippedSurvey = true;
         // load main scene
         Resume();
         board.ActiveWorld = null;

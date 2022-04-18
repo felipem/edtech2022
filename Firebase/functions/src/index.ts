@@ -11,6 +11,7 @@ app.use(cors());
 
 const worldcollection = db.collection("worlds");
 const surveycollection = db.collection("surveys");
+const clickedLinkcollection = db.collection("clickedLink");
 
 app.get("/", (req, res) => res.status(200).send("Hey there!"));
 
@@ -125,6 +126,38 @@ app.post("/surveypost", async (req: any, res: any) => {
     const newsurveyData = await surveycollection.add(survey);
 
     res.status(201).send(newsurveyData.id);
+  } catch (err) {
+    console.log(err);
+    res.status(500).send();
+  }
+});
+
+app.post("/clickedLink", async (req: any, res: any) => {
+  let authId = null;
+  try {
+    let authToken = null;
+    if (
+      req.headers.authorization &&
+        req.headers.authorization.split(" ")[0] === "Bearer"
+    ) {
+      authToken = req.headers.authorization.split(" ")[1];
+    }
+    const userInfo = await auth.verifyIdToken(authToken);
+    authId =userInfo.uid;
+  } catch (e:any) {
+    console.log(e.message);
+    return res
+        .status(401)
+        .send({error: "You are not authorized to make this request "+
+          req.authToken});
+  }
+
+  const clickedLink : ClickedLink = {authId: authId};
+
+  try {
+    await clickedLinkcollection.add(clickedLink);
+
+    res.status(201).send();
   } catch (err) {
     console.log(err);
     res.status(500).send();
@@ -255,6 +288,8 @@ interface Survey {
   pre: boolean;
   survey: SurveyData;
 }
-
+interface ClickedLink {
+  authId: string;
+}
 
 exports.api = functions.https.onRequest(app);

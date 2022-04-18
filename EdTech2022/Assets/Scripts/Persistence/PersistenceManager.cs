@@ -22,6 +22,8 @@ namespace Persistence
 
         private static bool created = false;
         private bool initialSurveyComplete = false;
+        private bool postSurveyComplete = false;
+        private bool skippedSurvey = false;
         void Awake()
         {
             if (!created)
@@ -62,5 +64,18 @@ namespace Persistence
             get => initialSurveyComplete;
             set => initialSurveyComplete = value;
         }
+
+        public bool PostSurveyComplete
+        {
+            get => postSurveyComplete;
+            set => postSurveyComplete = value;
+        }
+
+        public bool SkippedSurvey
+        {
+            get => skippedSurvey;
+            set => skippedSurvey = value;
+        }
+        
     }
 }

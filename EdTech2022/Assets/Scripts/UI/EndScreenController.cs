@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Persistence;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using World;
@@ -15,9 +16,11 @@ public class EndScreenController : MonoBehaviour
 
     private List<GameObject> elementsOff;
     private GameBoard board;
+    private PersistenceManager persistenceManager;
     // Start is called before the first frame update
     private void Start()
     {
+        persistenceManager = FindObjectOfType<PersistenceManager>();
         escapeController = gameObject.GetComponent<EscapeController>();
         board = FindObjectOfType<GameBoard>();
         winMenuUI.SetActive(false);
@@ -102,6 +105,7 @@ public class EndScreenController : MonoBehaviour
     public void MainMenuButtonOnClick()
     {
         board.SaveActiveWorld();
+        persistenceManager.SkippedSurvey = true;
         // show spinner/loader and switch scenes
         SceneManager.LoadScene("LoginUIScene", LoadSceneMode.Single);
         loader.SetActive(true);
