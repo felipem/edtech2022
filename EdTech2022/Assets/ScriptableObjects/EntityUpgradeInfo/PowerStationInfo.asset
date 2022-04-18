@@ -39,7 +39,7 @@ MonoBehaviour:
         power: 10
         environment: 0
       researchDescription: Build a better power system improving power output
-    upgradeText: Upgrade to double power capacity but double power requirements
+    upgradeText: Upgrade to double power capacity but double environmental cost
   - baseStats:
       cost: 1000
       money: 0
