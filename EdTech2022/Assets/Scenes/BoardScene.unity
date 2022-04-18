@@ -3644,7 +3644,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'End : No Survey'
+  m_Text: 'End : No Post Survey'
 --- !u!222 &574065951
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8287,7 +8287,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2021801631}
   m_Direction: 0
   m_Value: 0
-  m_Size: 0.9999998
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -9847,7 +9847,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'End : No Survey'
+  m_Text: 'End : No Post Survey'
 --- !u!222 &1583787932
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10486,7 +10486,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'End: No Survey'
+  m_Text: 'End: No Post Survey'
 --- !u!222 &1652536818
 CanvasRenderer:
   m_ObjectHideFlags: 0

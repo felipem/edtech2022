@@ -43,7 +43,7 @@
     },
     {
       "Key" : "sent_to_server",
-      "Value" : "Successfully submitted!"
+      "Value" : "Successfully submitted! Please wait to play..."
     },
     {
       "Key" : "OK",

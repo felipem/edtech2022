@@ -1996,7 +1996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playGameButton: {fileID: 2103299346}
-  playAnywaysGameButton: {fileID: 0}
+  playAnywaysGameButton: {fileID: 1692490435}
   loginPanel: {fileID: 124439462}
   surveyButton: {fileID: 722727705}
   worldManager: {fileID: 2065976777}

@@ -23,11 +23,13 @@ public class MenuController : MonoBehaviour
         if (!persistenceManager.InitialSurveyComplete)
         {
             playGameButton.GetComponentInChildren<Button>().interactable = false;
+            playAnywaysGameButton.GetComponentInChildren<Button>().interactable = true;
             surveyButton.SetActive(true);
         }
         else
         {
             playGameButton.GetComponentInChildren<Button>().interactable = true;
+            playAnywaysGameButton.GetComponentInChildren<Button>().interactable = false;
             surveyButton.SetActive(false);
         }
     }

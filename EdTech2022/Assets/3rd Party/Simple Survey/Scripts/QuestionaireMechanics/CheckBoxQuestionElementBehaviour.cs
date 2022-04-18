@@ -20,13 +20,13 @@ public class CheckBoxQuestionElementBehaviour : AbstractQuestionElementBehaviour
         {
             element.IsSelected = true;
             //Open Text Input if necessary
-            if (element.HasTextInput)
-            {
-                GameObject textInput = Instantiate(AdditionalTextInputPrefab);
-                AdditionalTextInputBehaviour inputBehaviour = textInput.GetComponentInChildren<AdditionalTextInputBehaviour>();
-                inputBehaviour.Element = element;
-                inputBehaviour.questionElementBehaviour = this;
-            }
+            //if (element.HasTextInput)
+            //{
+            //    GameObject textInput = Instantiate(AdditionalTextInputPrefab);
+            //    AdditionalTextInputBehaviour inputBehaviour = textInput.GetComponentInChildren<AdditionalTextInputBehaviour>();
+            //    inputBehaviour.Element = element;
+            //    inputBehaviour.questionElementBehaviour = this;
+            //}
         }
         else
         {

@@ -25,13 +25,13 @@ public class RadioButtonQuestionElementBehaviour : AbstractQuestionElementBehavi
         SelectedSign.SetActive(element.IsSelected);
 
         //Open Text Input if necessary
-        if (element.HasTextInput)
-        {
-            GameObject textInput = Instantiate(AdditionalTextInputPrefab);
-            AdditionalTextInputBehaviour inputBehaviour = textInput.GetComponentInChildren<AdditionalTextInputBehaviour>();
-            inputBehaviour.Element = element;
-            inputBehaviour.questionElementBehaviour = this;
-        }
+        //if (false) //element.HasTextInput)
+        //{
+        //    GameObject textInput = Instantiate(AdditionalTextInputPrefab);
+        //    AdditionalTextInputBehaviour inputBehaviour = textInput.GetComponentInChildren<AdditionalTextInputBehaviour>();
+        //    inputBehaviour.Element = element;
+        //    inputBehaviour.questionElementBehaviour = this;
+        //}
     }
 
     public override void ResetElement()
