@@ -51,14 +51,11 @@ public class SubmittingBehaviour : UI_AbstractMenuBehaviour {
         {
             APIService.Instance.SendPostsurvey(survey, (data) =>
             {
-                APIService.Instance.SendPresurvey(survey, (data) =>
-                {
-                    savedCount++;
-                    PlayerPrefs.SetInt("SavedCount", savedCount);
-                    persistenceManager.InitialSurveyComplete = true;
+                savedCount++;
+                PlayerPrefs.SetInt("SavedCount", savedCount);
+                persistenceManager.InitialSurveyComplete = true;
 
-                    SceneManager.LoadScene("LoginUIScene", LoadSceneMode.Single);
-                });
+                SceneManager.LoadScene("LoginUIScene", LoadSceneMode.Single);
             });
         }
     }
