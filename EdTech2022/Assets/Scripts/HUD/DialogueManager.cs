@@ -124,23 +124,5 @@ namespace Tutorial
             get => continueButton.interactable;
             set => continueButton.interactable = value;
         }
-
-
-        IEnumerator TypeSentence(string sentence)
-        {
-            // animate word typing in dialogue box
-            foreach (var letter in sentence.ToCharArray())
-            {
-                descriptionText.text += letter;
-                yield return null;
-            }
-        }
-
-        public void FinishTyping()
-        {
-            // show the full description if skipped
-            StopAllCoroutines();
-            descriptionText.text = fullDescriptionText;
-        }
     }
 }

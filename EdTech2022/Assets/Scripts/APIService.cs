@@ -11,7 +11,6 @@ public class APIService : MonoBehaviour
     private static string WORLDS_ENDPOINT = BASE_ENDPOINT + "worlds/";
     private static string PRE_SURVEY_ENDPOINT = BASE_ENDPOINT + "surveypre/";
     private static string POST_SURVEY_ENDPOINT = BASE_ENDPOINT + "surveypost/";
-    private static string USER_ENDPOINT = BASE_ENDPOINT + "user/";
 
     public string access_token { get; set; }
     private static bool created = false;
@@ -168,7 +167,7 @@ public class APIService : MonoBehaviour
     public void CreateWorld(ServerWorld world, System.Action<string> callBack)
     {
         string json = JsonConvert.SerializeObject(world, serializationSettings);
-        Debug.Log(json);
+        //Debug.Log(json);
         StartCoroutine(Post(WORLDS_ENDPOINT, json, callBack));
     }
 
@@ -192,7 +191,7 @@ public class APIService : MonoBehaviour
     {
         string url = WORLDS_ENDPOINT + id;
         string json = JsonConvert.SerializeObject(world, serializationSettings);
-        Debug.Log(json);
+        //Debug.Log(json);
         StartCoroutine(Put(url, json));
     }
 }
